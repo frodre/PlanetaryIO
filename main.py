@@ -16,7 +16,7 @@ import earth_energy
 # simple_climate_ux = climate.SimpleClimate(terrasol_ux)
 
 # Initializ Earth Energy balance
-earth = earth_energy.EarthEnergy()
+earth = earth_energy.EarthEnergy(simple_albedo=True)
 
 # TerraSol Layout
 # plot_layout = layout([[terrasol_ux.plot],
@@ -32,6 +32,6 @@ plot_layout = layout([[earth.plot],
 
 # show(plot_layout)
 curdoc().add_root(plot_layout)
-curdoc().title = 'TerraSol'
+curdoc().title = 'PlanetaryIO'
 
 

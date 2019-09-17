@@ -49,14 +49,15 @@ class EarthEnergy(object):
         self.s0 = None
         self.vis_energy_in = None
         self.update_solar_in()
+        self.simple_albedo = simple_albedo
 
         if simple_albedo:
-            self.simple_albedo = simple_albedo
             self.a_cloud = 0
             self.f_cloud = 0
             self.f_land = 1
             self.a_land = albedo
         else:
+            self
             self.a_cloud = albedo_cloud
             self.a_land = albedo_land
             self.f_cloud = frac_cloud
