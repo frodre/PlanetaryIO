@@ -126,9 +126,10 @@ class EarthEnergy(object):
         self.atm_ir = self.layer_arrows[1][1]
 
         self.layer_coeffs = None
-        self.info_div = Div(text='', width=325, height=175)
-        self.planet_title_div = Div(text="""<h2>Planet Parameters</h2>""")
-        self.solar_title_div = Div(text="""<h2>Solar Parameters</h2>""")
+        self.info_div = Div(text='', width=375, height=175)
+        self.planet_title_div = Div(text="""<h2>Planet Parameters</h2>""", width=300)
+        self.solar_title_div = Div(text="""<h2>Solar Parameters</h2>""", width=300)
+        self.info_title_div = Div(text="""<h2>Energy Budget Characteristics</h2>""", width=375)
 
         self._update_atm_refl()
 
@@ -799,10 +800,10 @@ class EarthEnergy(object):
 
         solar_constant = self.s0
         incident_energy = self.vis_energy_in
-
+        
+        # Taken out of table <tr><th colspan="2" style={title_style}>Energy Budget Characteristics</th></tr>
         text = """
         <table style="width:100%">
-            <tr><th colspan="2" style={title_style}>Energy Budget Characteristics</th></tr>
             <tr>
                 <td style={left_style}>Solar Constant: </td>
                 <td style={right_style}>{solar_constant:4.2f} W/m^2</td>

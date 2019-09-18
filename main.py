@@ -27,7 +27,7 @@ earth = earth_energy.EarthEnergy(simple_albedo=True)
 #                      sizing_mode='fixed')
 
 plot_layout = layout([[earth.plot],
-                      [earth.solar_title_div, earth.planet_title_div],
+                      [earth.solar_title_div, earth.planet_title_div, earth.info_title_div],
                       [earth.solar_wx, earth.albedo_wx, earth.info_div]])
 
 # show(plot_layout)
